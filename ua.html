@@ -3,8 +3,15 @@
     </header>
     <body>
         <div id="container"></div>
+        <div>
+            <span>Pointer Events: </span><span id="pointerEvents"></span>
+        </div>
+        <div>
+            <span>Visual Viewport: </span><span id="visualViewport"></span>
+        </div>
         <script>
             document.getElementById('container').textContent = navigator.userAgent;
+            document.getElementById('visualViewport').textContent = window.visualViewport;
         </script>
     </body>
 </html>
