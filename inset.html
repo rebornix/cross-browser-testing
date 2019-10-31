@@ -1,0 +1,33 @@
+<html>
+
+<head>
+    <style>
+        #container {
+            position: absolute;
+            top: 0;
+            bottom: 0;
+            background-color: gray;
+        }
+    </style>
+</head>
+
+<body>
+    <div id="container"></div>
+    <div>
+        <span>Pointer Events: </span><span id="pointerEvents"></span>
+    </div>
+    <div>
+        <span>Visual Viewport: </span><span id="visualViewport"></span>
+    </div>
+    <div>
+        <span>Max Touch Points: </span><span id="maxtouchpoints"></span>
+    </div>
+    <script>
+        document.getElementById('container').textContent = navigator.userAgent;
+        document.getElementById('pointerEvents').textContent = window.PointerEvent;
+        document.getElementById('visualViewport').textContent = window.visualViewport;
+        document.getElementById('maxtouchpoints').textContent = navigator.maxTouchPoints;
+    </script>
+</body>
+
+</html>
