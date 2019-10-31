@@ -9,12 +9,24 @@
         body {
             touch-action: none;
         }
+        #workbench-container {
+            touch-action: none;
+            position: absolute;
+            top: 0;
+            bottom: 0;
+            background-color: gray;
+            border-bottom: 2px solid red;
+            box-sizing: border-box;
+        }
+
     </style>
 </head>
 
 <body>
     <div><span>Touch on body disabled</span></div>
-    <div id="container" style="width:800px;height:600px;border:1px solid grey"></div>
+    <div id="workbench-container">
+        <div id="container" style="width:800px;height:600px;border:1px solid grey"></div>
+    </div>
     <script>
         require(['vs/editor/editor.main'], function () {
             var editor = monaco.editor.create(document.getElementById('container'), {
