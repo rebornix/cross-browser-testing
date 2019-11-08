@@ -1,0 +1,52 @@
+<html>
+
+<head>
+    <style>
+        body {
+            touch-action: none;
+        }
+    </style>
+</head>
+
+<body>
+    <div id="container">
+        <!-- editor-instance will be detached from container later -->
+        <div id="editor-instance">
+            <!-- we are going to add the textarea programatically -->
+            <!-- <textarea></textarea> -->
+        </div>
+    </div>
+    <div id="text" style="color:red;">
+        <span>Remove</span>
+    </div>
+    <div id="output">
+
+    </div>
+    <script>
+        const container = document.getElementById('container');
+        const editorInstance = document.getElementById('editor-instance');
+        const text = document.getElementById('text');
+        const textarea = document.createElement('textarea');
+        textarea.value = 'test';
+        editorInstance.appendChild(textarea);
+
+        const print = (text) => {
+            const val = document.createElement('div');
+            val.innerText = text;
+            document.getElementById('output').appendChild(val);
+        }
+
+        textarea.addEventListener('blur', () => {
+            print('blur');
+        });
+        text.addEventListener('mousedown', (e) => {
+            print('mousedown');
+            container.removeChild(editorInstance);
+            e.preventDefault();
+            e.stopImmediatePropagation();
+        });
+    </script>
+
+</body>
+
+</html>
