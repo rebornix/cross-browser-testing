@@ -17,6 +17,11 @@
 
     </div>
     <script>
+        const print = (text) => {
+                const val = document.createElement('div');
+                val.innerText = text;
+                document.getElementById('output').appendChild(val);
+            }
         const container = document.getElementById('container');
         container.addEventListener('pointerdown', () => {
             print('pointerdown');
