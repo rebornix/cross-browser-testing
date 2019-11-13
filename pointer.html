@@ -1,0 +1,33 @@
+<html>
+
+<head>
+    <style>
+        #container {
+            height: 300px;
+            width: 300px;
+        }
+    </style>
+</head>
+
+<body>
+    <div id="container">
+    </div>
+    <div id="output">
+
+    </div>
+    <script>
+        const container = document.getElementById('container');
+        container.addEventListener('pointerdown', () => {
+            print('pointerdown');
+        })
+        container.addEventListener('pointerup', () => {
+            print('pointerup');
+        })
+        container.addEventListener('pointermove', () => {
+            print('pointermove');
+        })
+    </script>
+
+</body>
+
+</html>
