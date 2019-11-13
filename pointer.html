@@ -17,12 +17,13 @@
 
     </div>
     <script>
-        print('has touch event', !!window.TouchEvent);
         const print = (text) => {
-                const val = document.createElement('div');
-                val.innerText = text;
-                document.getElementById('output').appendChild(val);
-            }
+            const val = document.createElement('div');
+            val.innerText = text;
+            document.getElementById('output').appendChild(val);
+        }
+        print('has touch event', !!window.TouchEvent);
+
         const container = document.getElementById('container');
         container.addEventListener('pointerdown', (e) => {
             print('pointerdown ' + e.clientX + ' ' + e.clientY);
