@@ -23,14 +23,14 @@
                 document.getElementById('output').appendChild(val);
             }
         const container = document.getElementById('container');
-        container.addEventListener('pointerdown', () => {
-            print('pointerdown');
+        container.addEventListener('pointerdown', (e) => {
+            print('pointerdown ' + e.clientX + ' ' + e.clientY);
         })
-        container.addEventListener('pointerup', () => {
-            print('pointerup');
+        container.addEventListener('pointerup', (e) => {
+            print('pointerup' + e.clientX + ' ' + e.clientY);
         })
-        container.addEventListener('pointermove', () => {
-            print('pointermove');
+        container.addEventListener('pointermove', (e) => {
+            print('pointermove' + e.clientX + ' ' + e.clientY);
         })
     </script>
 
