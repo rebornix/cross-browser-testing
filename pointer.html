@@ -22,7 +22,7 @@
             val.innerText = text;
             document.getElementById('output').appendChild(val);
         }
-        print('has touch event', !!window.TouchEvent);
+        print('has touch event ' +  !!window.TouchEvent);
 
         const container = document.getElementById('container');
         container.addEventListener('pointerdown', (e) => {
