@@ -24,11 +24,18 @@
     <div>
         <span>Max Touch Points: </span><span id="maxtouchpoints"></span>
     </div>
+    <div>
+        <span>Inset: </span><span id="inset"></span>
+    </div>
     <script>
         document.getElementById('container').textContent = navigator.userAgent;
         document.getElementById('pointerEvents').textContent = window.PointerEvent;
         document.getElementById('visualViewport').textContent = window.visualViewport;
         document.getElementById('maxtouchpoints').textContent = navigator.maxTouchPoints;
+
+        var a = document.createElement('div');
+        a.style.bottom = 'env(safe-area-inset-bottom, 0)';
+        document.getElementById('inset').textContent = getComputedStyle(a).bottom;
     </script>
 </body>
 
