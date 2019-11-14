@@ -28,27 +28,32 @@
         print('has touch event ' +  !!window.TouchEvent);
 
         const container = document.getElementById('container');
+        container.addEventListener('mousedown', (e) => {
+            print('mousedown ' + e.clientX + ' ' + e.clientY);
+        })
         container.addEventListener('pointerdown', (e) => {
             print('pointerdown ' + e.clientX + ' ' + e.clientY);
+        })
+
+        container.addEventListener('mouseup', (e) => {
+            print('mouseup' + e.clientX + ' ' + e.clientY);
         })
         container.addEventListener('pointerup', (e) => {
             print('pointerup' + e.clientX + ' ' + e.clientY);
         })
-        container.addEventListener('pointermove', (e) => {
-            print('pointermove' + e.clientX + ' ' + e.clientY);
-        })
-        container.addEventListener('mousedown', (e) => {
-            print('mousedown ' + e.clientX + ' ' + e.clientY);
-        })
-        container.addEventListener('mouseup', (e) => {
-            print('mouseup' + e.clientX + ' ' + e.clientY);
-        })
+
         container.addEventListener('mousemove', (e) => {
             print('mousemove' + e.clientX + ' ' + e.clientY);
+        })
+        container.addEventListener('pointermove', (e) => {
+            print('pointermove' + e.clientX + ' ' + e.clientY);
         })
         container.addEventListener('dblclick', (e) => {
             print('dblclick' + e.clientX + ' ' + e.clientY);
         })
+
+
+
     </script>
 
 </body>
