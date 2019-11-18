@@ -54,7 +54,7 @@
         container.addEventListener('touchstart', (e) => {
             print('touchstart');
             const currentTime = (new Date()).getTime();
-            console.log(currentTime - lastTime);
+            print(currentTime - lastTime);
             lastTime = currentTime;
 
             e.preventDefault();
