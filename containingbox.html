@@ -1,0 +1,40 @@
+<html>
+
+<head>
+    <style>
+        #container {
+            background-color: gray;
+            border-bottom: 2px solid red;
+            box-sizing: border-box;
+            width: 180px;
+            height: 100px;
+            overflow: hidden;
+        }
+
+        #inner {
+            position: absolute;
+            left: 170px;
+            top: 0;
+            width: 100px;
+            height: 100px;
+            background-color: blue;
+        }
+    </style>
+</head>
+
+<body>
+    <div id="container">
+        <span>position: static</span><br>
+        <span>overflow: hidden</span>
+        <div id="inner"></div>
+    </div>
+
+    <script>
+        window.translate3d = () => {
+            document.getElementById('container').style.transform = 'translate3d(0, 0, 0)';
+        }
+    </script>
+    <button onclick="translate3d()">Translate 3D</button>
+</body>
+
+</html>
