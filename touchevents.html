@@ -52,7 +52,7 @@
             print('dblclick' + e.clientX + ' ' + e.clientY);
         })
         container.addEventListener('touchstart', (e) => {
-            print('touchstart' + e.clientX + ' ' + e.clientY);
+            print('touchstart');
             const currentTime = (new Date()).getTime();
             console.log(currentTime - lastTime);
             lastTime = currentTime;
