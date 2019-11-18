@@ -1,0 +1,82 @@
+<html>
+
+<head>
+    <style>
+        body {
+            touch-action: none;
+        }
+
+        #container {
+            height: 100px;
+            width: 100px;
+            background-color: gainsboro;
+        }
+
+        #output {
+            height: 200px;
+            overflow: scroll;
+        }
+    </style>
+</head>
+
+<body>
+    <div id="container">
+    </div>
+    <div id="output">
+
+    </div>
+    <script>
+        const print = (text) => {
+            const val = document.createElement('div');
+            val.innerText = text;
+            document.getElementById('output').appendChild(val);
+        }
+
+        print('has touch event ' + !!window.TouchEvent);
+
+        const container = document.getElementById('container');
+
+        container.addEventListener('mousedown', (e) => {
+            print('mousedown ' + e.clientX + ' ' + e.clientY);
+        })
+        container.addEventListener('pointerdown', (e) => {
+            print('pointerdown ' + e.clientX + ' ' + e.clientY);
+        })
+
+        container.addEventListener('mouseup', (e) => {
+            print('mouseup' + e.clientX + ' ' + e.clientY);
+        })
+        container.addEventListener('pointerup', (e) => {
+            print('pointerup' + e.clientX + ' ' + e.clientY);
+        })
+
+        container.addEventListener('mousemove', (e) => {
+            print('mousemove' + e.clientX + ' ' + e.clientY);
+        })
+        container.addEventListener('pointermove', (e) => {
+            print('pointermove' + e.clientX + ' ' + e.clientY);
+        })
+        container.addEventListener('dblclick', (e) => {
+            print('dblclick' + e.clientX + ' ' + e.clientY);
+        })
+
+        container.addEventListener('touchstart', (e) => {
+            print('touchstart' + e.clientX + ' ' + e.clientY);
+        })
+        container.addEventListener('touchmove', (e) => {
+            print('touchmove' + e.clientX + ' ' + e.clientY);
+        })
+        container.addEventListener('touchend', (e) => {
+            print('touchend' + e.clientX + ' ' + e.clientY);
+        })
+        container.addEventListener('touchcancel', (e) => {
+            print('touchcancel' + e.clientX + ' ' + e.clientY);
+        })
+
+
+
+    </script>
+
+</body>
+
+</html>
