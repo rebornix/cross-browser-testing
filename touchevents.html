@@ -27,6 +27,7 @@
 
     </div>
     <script>
+        var lastTime = 0;
         const print = (text) => {
             const val = document.createElement('div');
             val.innerText = text;
@@ -52,6 +53,10 @@
         })
         container.addEventListener('touchstart', (e) => {
             print('touchstart' + e.clientX + ' ' + e.clientY);
+            const currentTime = (new Date()).getTime();
+            console.log(currentTime - lastTime);
+            lastTime = currentTime;
+
             e.preventDefault();
         })
         container.addEventListener('touchmove', (e) => {
