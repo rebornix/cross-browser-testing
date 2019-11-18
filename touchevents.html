@@ -51,12 +51,15 @@
         })
         container.addEventListener('touchstart', (e) => {
             print('touchstart' + e.clientX + ' ' + e.clientY);
+            e.preventDefault();
         })
         container.addEventListener('touchmove', (e) => {
             print('touchmove' + e.clientX + ' ' + e.clientY);
+            e.preventDefault();
         })
         container.addEventListener('touchend', (e) => {
             print('touchend' + e.clientX + ' ' + e.clientY);
+            e.preventDefault();
         })
         container.addEventListener('touchcancel', (e) => {
             print('touchcancel' + e.clientX + ' ' + e.clientY);
