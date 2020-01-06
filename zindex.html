@@ -1,0 +1,53 @@
+<html>
+
+<head>
+    <style>
+        #container {
+            background-color: gray;
+            width: 180px;
+            height: 100px;
+            position: absolute;
+        }
+
+        #container2 {
+            background-color: blue;
+            width: 180px;
+            height: 100px;
+            left: 180px;
+            position: absolute;
+        }
+
+        .inner {
+            position: absolute;
+            transform: translate3d(0, 0, 0);
+            width: 200px;
+            height: 20px;
+            background-color: red;
+            z-index: 1000;
+        }
+
+        .inner2 {
+            position: absolute;
+            transform: translate3d(0, 0, 0);
+            top: 40px;
+            left: -20px;
+            width: 200px;
+            height: 20px;
+            background-color: yellow;
+        }
+    </style>
+</head>
+
+<body>
+    <div id="container"> <!-- z index auto -->
+        <!-- <div style="transform: translate3d(0, 0, 0);"> -->
+            <div class="inner"></div>
+        <!-- </div> -->
+    </div>
+
+    <div id="container2"> <!-- z index auto -->
+        <div class="inner2"></div>
+    </div>
+</body>
+
+</html>
