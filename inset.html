@@ -31,7 +31,7 @@
     <script>
         document.getElementById('container').textContent = navigator.userAgent;
         document.getElementById('pointerEvents').textContent = window.PointerEvent;
-        document.getElementById('visualViewport').textContent = 'visualViewport.width: ' + window.visualViewport.width + ' visualViewport.height: ' + window.visualViewport.height + ' window.outerHeight: ' + window.outerHeight;
+        document.getElementById('visualViewport').textContent = 'visualViewport.width: ' + window.visualViewport.width + ' visualViewport.height: ' + window.visualViewport.height + ' window.outerHeight: ' + window.outerHeight + ' real height: ' + document.getElementById('container').clientHeight;
         document.getElementById('maxtouchpoints').textContent = navigator.maxTouchPoints;
 
         var a = document.createElement('div');
