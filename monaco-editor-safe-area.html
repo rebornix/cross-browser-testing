@@ -28,6 +28,7 @@
     <div><span>Touch on body disabled</span></div>
     <div id="workbench-container">
         <div id="container" style="width:800px;height:600px;border:1px solid grey"></div>
+        <div id="log" style="position: absolute; right: 0px">log</div>
     </div>
     <script>
         require(['vs/editor/editor.main'], function () {
@@ -38,6 +39,10 @@
                     '}'
                 ].join('\n'),
                 language: 'javascript'
+            });
+
+            window.visualViewport.addEventListener('resize', () => {
+                document.getElementById('log').textContent = window.visualViewport.height + 'px';
             });
         });
     </script>
